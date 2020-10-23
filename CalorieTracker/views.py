@@ -7,10 +7,10 @@ from .forms import CustomUserCreationForm
 class SignUpView(generic.CreateView):
     form_class = CustomUserCreationForm
     success_url = reverse_lazy('login')
-    template_name = 'registration/signup.html'
+    template_name = 'signup.html'
 
 
 # Create your views here.
 def base(request):
-    return render(request, 'base.html',
+    return render(request, 'registration/',
                   {'Calorie Tracker': base})
